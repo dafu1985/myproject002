@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>出力ページ</title>
+</head>
+<body>
+    <form th:action="@{/input}" th:object="${myproject002Form}" method="post">
+        <div th:object="${myproject002Form}">
+            <p>
+                名前：<span th:text="*{name}"></span>
+            </p>
+            <p>
+                電話番号：<span th:text="*{tel}"></span>
+            </p>
+            <p>
+                <input type="submit" value="入力画面へ戻る" />
+            </p>
+        </div>
+    </form>
+</body>
+</html>
